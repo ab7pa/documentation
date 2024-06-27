@@ -33,37 +33,21 @@ These tasks are all that should be required on your local software host. Once th
 Point nodes to the local server
 ===============================
 
-To point a node to the local software repository, navigate to **Setup > Advanced Configuration**. The table on this webpage has a row for each type of software that can be installed on AREDN |trade| nodes. It might be a good idea to take a screenshot of these settings so you can refer to them later. A typical default URL for *firmwarepath* is shown below:
+To point a node to the local software repository, login as the node *admin* and click in the **Firmware** or **Packages** section to open the admin display. The default firmware URL is shown below:
 
 ::
 
-  http://downloads.arednmesh.org/firmware
+  http://downloads.arednmesh.org
 
-Simply replace this URL with the one that you configured on your local software host, then click the *Save Setting* button on that row. For example, the new entry for *firmwarepath* might look like the one below:
+Simply replace this URL with the one that you configured on your local software host, then click the ``Done`` button and ``Commit`` your change. The URL you enter should match exactly with the alias or path you created and tested on your web server as described in the previous section. For example, the new entry for the firmware path might look like the one below:
 
-::
-
-  http://ab7pa-box2.local.mesh/arednSoftware/firmware
-
-It is good practice to use the `fully qualified domain name (FQDN) <https://en.wikipedia.org/wiki/Fully_qualified_domain_name>`_ so the node will be able to resolve the domain portion of the URL to the mesh host's IP address. The URL you enter should match exactly with the alias or path you created and tested on your web server as described in the previous section.
-
-.. image:: _images/set-software-host.png
-   :alt:  Advanced Configuration - set software URL
+.. image:: _images/admin-local-firmware-path.png
+   :alt:  Admin local firmware path
    :align: center
 
 |
 
-After you have entered the new URL, click the **Save Setting** button to activate the new entry. To restore the default entry, click the **Set to Default** button.
-
-Once the node has been pointed to the local software repository, you can navigate to **Setup > Administration**. In the firmware and package sections, you can click the **Refresh** button to get the list of available software from the local software repository.
-
-.. image:: _images/refresh-software-list.png
-   :alt:  Administration - refresh software list
-   :align: center
-
-|
-
-The following example shows the type of information returned when you click the **Refresh** button:
+Once the node has been pointed to the local software repository, you can navigate to **Firmware** or **Packages** admin display to click the *refresh* icon to update the list of available software from the local software repository. The following example shows the type of information returned when you click in the *Download Firmware* or *Download Package* field after refreshing the list:
 
 ::
 
@@ -83,4 +67,4 @@ The following example shows the type of information returned when you click the 
   Signature check passed.
   ...
 
-Click the **Select firmware** or **Select package** dropdown lists to see the software available for download from the local software server. Select a firmware image or package and click the **Download** button. Status information will appear showing the actions that were taken to install the software from the local software host. A message may appear that a reboot is required to refresh and restart all services, but this is a normal status message and does not indicate an error condition.
+The URL will show the name of your new local software server as the source for each of the images or packages.
